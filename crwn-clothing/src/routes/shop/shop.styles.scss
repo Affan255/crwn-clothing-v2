@@ -6,7 +6,7 @@
   row-gap: 50px;
 
   @include for-phone-only {
-    padding: 0 70px;
+    padding: 0 50px;
     grid-template-columns: 100%;
     row-gap: 30px;
   }

@@ -1,3 +1,4 @@
+@import '../../styles/mixins';
 .navigation {
   height: 70px;
   width: 100%;
@@ -21,6 +22,9 @@
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
+      @include for-phone-only {
+        padding: 3px 6px;
+      }
     }
   }
 }
