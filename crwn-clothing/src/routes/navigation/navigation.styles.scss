@@ -5,11 +5,32 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  @include for-phone-only {
+    width: 80%;
+    margin: auto;
+  }
+  @include for-tablet-portrait-up {
+    width: 90%;
+    margin: auto;
+  }
+  @include for-tablet-landscape-up {
+    width: 95%;
+    margin: auto;
+  }
 
   .logo-container {
     height: 100%;
     width: 70px;
     padding: 25px;
+    @include for-phone-only {
+      padding: 15px;
+    }
+    @include for-tablet-portrait-up {
+      padding: 18px;
+    }
+    @include for-tablet-landscape-up {
+      padding: 21px;
+    }
   }
 
   .nav-links-container {
