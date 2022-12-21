@@ -1,40 +1,42 @@
-@import '../../styles/mixins';
-.category-container {
+import styled from 'styled-components'
+import { device } from '../../styles/devices'
+export const CategoryContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
-  @include for-phone-only {
+
+  @media ${device.phone} {
     padding: 0 50px;
     grid-template-columns: 100%;
     row-gap: 30px;
   }
 
-  @include for-tablet-portrait-up {
+  @media ${device.tabletPortrait} {
     padding: 0 40px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 30px;
   }
 
-  @include for-tablet-landscape-up {
+  @media ${device.tabletLandscape} {
     padding: 0 20px;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 30px;
     column-gap: 15px;
   }
-}
-.category-title {
+`
+export const CategoryTitle = styled.h2`
   font-size: 28px;
   margin-bottom: 25px;
   text-align: center;
-  @include for-phone-only {
+  @media ${device.phone} {
     padding: 0 50px;
   }
-  @include for-tablet-portrait-up {
+  @media ${device.tabletPortrait} {
     padding: 0 40px;
   }
-  @include for-tablet-landscape-up {
+  @media ${device.tabletLandscape} {
     padding: 0 20px;
   }
-}
+`

@@ -1,22 +1,21 @@
-@import '../../styles/mixins';
+import styled from 'styled-components'
+import { device } from '../../styles/devices'
 
-.authentication-container {
+export const AuthenticationContainer = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin: 30px auto;
-  
 
-  @include for-phone-only {
+  @media ${device.phone} {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
-  @include for-tablet-portrait-up {
+  @media ${device.tabletPortrait} {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-
-}
+`
